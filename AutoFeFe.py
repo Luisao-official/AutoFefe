@@ -59,9 +59,7 @@ def check_events():
 
 def send_email():
     email_address, email_password = SendEmail.read_environment_variables()
-    SendEmail.send_email(
-        email_address, email_password, "fernando.carnevale@aluno.ifsp.edu.br"
-    )
+    SendEmail.send_email(email_address, email_password, "test@email.edu.br")
 
 
 def log(message):

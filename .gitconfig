@@ -1,0 +1,40 @@
+# User Information
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Editor Configuration
+git config --global core.editor "your-preferred-editor"
+
+# Default Branch Name
+git config --global init.defaultBranch "main"
+
+# Display Colors
+git config --global color.ui auto
+
+# Set Upstream Branch Automatically
+git config --global push.default current
+
+# Aliases (Custom Shortcuts)
+git config --global alias.st "status"
+git config --global alias.co "checkout"
+git config --global alias.br "branch"
+git config --global alias.ci "commit"
+git config --global alias.df "diff"
+git config --global alias.log "log --oneline --decorate --all --graph"
+
+# Credential Caching (Adjust timeout as needed)
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+
+# Enable Git Auto-correct
+git config --global help.autocorrect 1
+
+# Adjust Diff Tool (Example: Beyond Compare)
+# git config --global diff.tool bc3
+# git config --global difftool.bc3.path "C:/Program Files/Beyond Compare 4/bcomp.exe"
+# git config --global difftool.prompt false
+
+# Adjust Merge Tool (Example: Beyond Compare)
+# git config --global merge.tool bc3
+# git config --global mergetool.bc3.path "C:/Program Files/Beyond Compare 4/bcomp.exe"
+# git config --global mergetool.prompt false
