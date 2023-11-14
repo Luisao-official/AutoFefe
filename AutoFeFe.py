@@ -69,13 +69,33 @@ def log(message):
 
 commands = {"checkEvents": check_events, "sendMail": send_email}
 
-actual_entry = "Home"
+arduino = serial.Serial(port="COM3", baudrate=115200, timeout=1)
 challenge = {"yes": 1, "no": 0}
 
-arduino = serial.Serial(port="COM3", baudrate=115200, timeout=1)
+actual_entry = "Home"
 
 while True:
+    # Read data from Arduino
     data = arduino.readline().decode().strip()
+    if data[0:8] == "execute.":
+        # Send a response back to Arduino if needed
+        system("cls")
+        top_line = [print("=", end="") for _ in range(0, 50)]
+        print("\n")
+        commands[data[8:]]()
+        response = bytes("Response from Python", encoding="utf-8") + b"\n"
+        arduino.write(response)
+    # else:
+    #     print("Waiting for button press...")
+    #     time.sleep(0.1)  # Delay for one tenth of a second
+    else:
+        system("cls")
+        if len(data.split(".")) > 1:
+            actual_entry = data.split(".")[1]
+        print("--------------------")
+        print(f"posicao: {actual_entry}")
+        print("--------------------")
+        log(data)
+        # print(data) if data != "" else None
     time.sleep(0.1)
-
 arduino.close()
