@@ -8,11 +8,11 @@ O Arduino é uma plataforma de prototipagem eletrônica de hardware livre e de p
 
 A possibilidade de interação de hardware permite, por exemplo, que o microcontrolador realize medições de temperatura e umidade e envie os dados para o computador ou celular (a ser implementado), que por sua vez, pode tomar decisões baseadas nesses dados, como ligar um ventilador ou um aquecedor. :fire: :snowflake:
 
-O objetivo do projeto é criar ferramentas que são acessíveis, com baixo custo, flexíveis e fáceis de se usar por principiantes e profissionais. O Arduino, por ser de hardware livre e amplamente utilizado, propicia a melhor acessibilidade.
+O objetivo do projeto é criar ferramentas que são acessíveis, com baixo custo, flexíveis e fáceis de se usar por principiantes e profissionais. O Arduino, por ser de hardware livre e amplamente utilizado, propicia esta acessibilidade ao projeto.
 
 ##### Integração de plataformas
 
-AutoFefe foi desenvolvido para enviar e receber comandos de um computador ou celular (a ser implementado) utilizando o protocolo UART, possibilitando a execução de scripts de automação mais pesados e complexos
+AutoFefe foi desenvolvido para enviar e receber comandos de um computador ou celular (a ser implementado) utilizando o protocolo USART, possibilitando a execução de scripts de automação mais pesados e complexos
 
 #### Exemplos de uso
 
@@ -30,7 +30,7 @@ você também precisará gravar o sketch do arduino no seu arduino, para isso vo
 
 Para utilizar o nucleo, você precisará, caso necessário, fazer alterações no arquivo *Autofefe.py*, e gravar o sketch do arduino no seu microcontrolador.
 
-Caso for utilizar os modulos padrões, você precisará conectar os seguintes componentes ao seu arduino:
+Caso for utilizar os modulos padrões, você precisará conectar os seguintes componentes no arduino da maneira ilustrada:
 ![Schematic](schematic.png)
 
 tendo conferido isso, você pode executar o nucleo com o arquivo *Autofefe.bat*
